@@ -34,3 +34,15 @@ module Shellwords
     alias join shelljoin
   end
 end
+
+class String
+  def shellescape
+    Shellwords.escape(self)
+  end
+end
+
+class Array
+  def shelljoin
+    Shellwords.join(self)
+  end
+end
