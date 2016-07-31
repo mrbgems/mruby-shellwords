@@ -4,6 +4,9 @@
 #
 # Licensed under the same term as Ruby.
 # https://www.ruby-lang.org/en/about/license.txt
+#
+# Original:
+# https://github.com/ruby/ruby/blob/v2_3_1/lib/shellwords.rb
 module Shellwords
   def shellescape(str)
     str = str.to_s
@@ -19,5 +22,15 @@ module Shellwords
 
   class << self
     alias escape shellescape
+  end
+
+  def shelljoin(array)
+    array.map { |arg| shellescape(arg) }.join(' ')
+  end
+
+  module_function :shelljoin
+
+  class << self
+    alias join shelljoin
   end
 end
