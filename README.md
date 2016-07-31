@@ -37,5 +37,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/k0kubu
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The same as Ruby.
+https://www.ruby-lang.org/en/about/license.txt
 
