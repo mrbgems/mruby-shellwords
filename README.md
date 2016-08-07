@@ -1,4 +1,4 @@
-# mruby-shellwords
+# mruby-shellwords [![Build Status](https://travis-ci.org/k0kubun/mruby-shellwords.svg?branch=master)](https://travis-ci.org/k0kubun/mruby-shellwords)
 
 [shellwords](https://github.com/ruby/ruby/blob/v2_3_1/lib/shellwords.rb) for mruby.
 
