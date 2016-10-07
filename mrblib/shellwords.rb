@@ -8,13 +8,16 @@
 # Original:
 # https://github.com/ruby/ruby/blob/v2_3_1/lib/shellwords.rb
 module Shellwords
+  SHELLESCAPE_REGEXP = /([^A-Za-z0-9_\-.,:\/@\n])/
+  NEWLINE_REGEXP     = /\n/
+
   def shellescape(str)
     str = str.to_s
     return "''".dup if str.empty?
 
     str = str.dup
-    str.gsub!(/([^A-Za-z0-9_\-.,:\/@\n])/, "\\\\\\1")
-    str.gsub!(/\n/, "'\n'")
+    str.gsub!(SHELLESCAPE_REGEXP, "\\\\\\1")
+    str.gsub!(NEWLINE_REGEXP, "'\n'")
     str
   end
 
